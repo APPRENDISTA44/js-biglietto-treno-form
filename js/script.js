@@ -15,6 +15,7 @@ var biglCosto = document.getElementById('bigl-costo');
 //altre variabili
 var formKmValue;
 var formEtaValue;
+var visibilita = document.getElementById('visibilita');
 
 //evento click su genera
 formGenera.addEventListener('click',
@@ -23,18 +24,30 @@ formGenera.addEventListener('click',
     formEtaValue = formEta.value;
 
     //calcolo
-    var biglCosto = 0.21 * formKmValue;
+    var prezzo = 0.21 * formKmValue;
     var offerta = 'Prezzo standard'
     if (formEtaValue == 'minorenne') {
-
-    } else if (formEtaValue == 'maggiorenne') {
-
+      prezzo = prezzo - (prezzo/100)*20;
+      offerta = 'Sconto Silver'
+    } else if (formEtaValue == 'over') {
+      prezzo = prezzo - (prezzo/100)*40;
+      offerta = 'Sconto Gold'
     }
-
-
     biglNome.innerHTML = formName.value;
+    biglOfferta.innerHTML = offerta;
+    biglCarrozza.innerHTML = Math.floor(Math.random()*10)+1;
+    biglCp.innerHTML = Math.floor(Math.random()*100000)+1; ;
+    biglCosto.innerHTML = prezzo.toFixed(2) + ' Euro';
+    visibilita.className = 'visible'
+  }
+);
 
-
-
+//evento click su annulla
+formAnnulla.addEventListener('click',
+  function(){
+  formName.value = '';
+  formKm.value = '';
+  formEta.value = 'maggiorenne'
+  visibilita.className = 'hidden'
   }
 );
