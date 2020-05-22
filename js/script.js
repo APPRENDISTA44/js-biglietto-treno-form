@@ -22,7 +22,7 @@ formGenera.addEventListener('click',
   function(){
     formKmValue = formKm.value;
     formEtaValue = formEta.value;
-
+    
     //calcolo
     var prezzo = 0.21 * formKmValue;
     var offerta = 'Prezzo standard'
