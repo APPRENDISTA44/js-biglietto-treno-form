@@ -102,3 +102,7 @@ button:hover{
 .visible{
   display: block;
 }
+/*gestione errori*/
+#errore{
+  color: red;
+}
