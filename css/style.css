@@ -25,10 +25,12 @@ h2{
   width: 90%;
   margin: 0 auto;
   padding: 20px 10px;
+  border-radius: 5px;
 }
 .wrapper.insert{
   text-align: center;
 }
+/* sezione interazione con utente */
 .dati{
   display: inline-block;
   width: 15%;
@@ -44,10 +46,36 @@ label{
 button{
   font-size: 18px;
   color: #b91450;
+  border-radius: 5px;
+  background-color: #d1d1d1;
+  cursor: pointer;
+  padding: 3px 2px;
 }
 button:first-child{
   margin-right: 10px;
 }
+input:focus,
+select:focus{
+  background-color: rgb(185, 20, 80);
+}
+input,
+select{
+  height: 30px;
+  border: 1px solid rgb(185, 20, 80);
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+input:focus::placeholder,
+select:focus{
+  color: white;
+}
+
+button:hover{
+  color: white;
+  background-color: grey;
+}
+/* sezione creazione biglietto */
 .details{
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
