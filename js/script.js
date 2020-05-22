@@ -26,6 +26,7 @@ formGenera.addEventListener('click',
     forNameValue = formName.value;
     //se clicca su genera senza avere annullato prima scompare la scritta di errore
     errore.className = 'hidden'
+    visibilita.className = 'hidden'
     //controllo dati utente
     if ((isNaN(formKmValue)) || !(isNaN(forNameValue)) || (formKmValue == '')) {
       errore.className = 'visible'
